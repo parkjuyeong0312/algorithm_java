@@ -2,14 +2,14 @@ package basic;
 
 import java.util.Scanner;
 
-//ë¬¸ì œ
-//ì²«ì§¸ ì¤„ì—ëŠ” ë³„ 1ê°œ, ë‘˜ì§¸ ì¤„ì—ëŠ” ë³„ 2ê°œ, Në²ˆì§¸ ì¤„ì—ëŠ” ë³„ Nê°œë¥¼ ì°ëŠ” ë¬¸ì œ
+//¹®Á¦
+//Ã¹Â° ÁÙ¿¡´Â º° 1°³, µÑÂ° ÁÙ¿¡´Â º° 2°³, N¹øÂ° ÁÙ¿¡´Â º° N°³¸¦ Âï´Â ¹®Á¦
 //
-//ìž…ë ¥
-//ì²«ì§¸ ì¤„ì— N(1 â‰¤ N â‰¤ 100)ì´ ì£¼ì–´ì§„ë‹¤.
+//ÀÔ·Â
+//Ã¹Â° ÁÙ¿¡ N(1 ¡Â N ¡Â 100)ÀÌ ÁÖ¾îÁø´Ù.
 //
-//ì¶œë ¥
-//ì²«ì§¸ ì¤„ë¶€í„° Në²ˆì§¸ ì¤„ê¹Œì§€ ì°¨ë¡€ëŒ€ë¡œ ë³„ì„ ì¶œë ¥í•œë‹¤.
+//Ãâ·Â
+//Ã¹Â° ÁÙºÎÅÍ N¹øÂ° ÁÙ±îÁö Â÷·Ê´ë·Î º°À» Ãâ·ÂÇÑ´Ù.
 public class boj2438 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
