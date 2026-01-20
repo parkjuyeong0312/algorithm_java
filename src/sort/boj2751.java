@@ -2,6 +2,7 @@ package sort;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 //문제
 //N개의 수가 주어졌을 때, 이를 오름차순으로 정렬하는 프로그램을 작성하시오.
@@ -40,11 +41,17 @@ public class boj2751 {
             arr[i]=Integer.parseInt(br.readLine());
         }
 
+//        Arrays.sort(arr);
         mergeSort(0,N-1);
 
+        StringBuilder sb = new StringBuilder();
         for(int i =0; i<N; i++){
-            System.out.println(arr[i]);
+            sb.append(arr[i]).append("\n");
         }
+
+        sb.delete(sb.length()-1,sb.length());
+
+        System.out.println(sb);
     }
 
     static void mergeSort(int left, int right){
@@ -58,24 +65,19 @@ public class boj2751 {
     }
 
     static void merge(int left, int mid, int right){
-        int i = left;
-        int j = mid+1;
+        int l = left;
+        int r = mid+1;
         int k = left;
 
-        while(i<=mid&&j<=right){
-            if(arr[i]<=arr[j]) tmp[k++]=arr[i++];
-            else tmp[k++]=arr[j++];
+        while(l<=mid&&r<=right){
+            if(arr[l]<=arr[r]) tmp[k++] = arr[l++];
+            else tmp[k++] = arr[r++];
         }
 
-        while(i<=mid){
-            tmp[k++]=arr[i++];
-        }
+        while(l<=mid) tmp[k++] = arr[l++];
+        while(r<=right) tmp[k++] = arr[r++];
 
-        while(j<=right){
-            tmp[k++]=arr[j++];
-        }
-
-        for(int idx = left; idx<=right;idx++){
+        for(int idx=left; idx<=right; idx++){
             arr[idx]=tmp[idx];
         }
     }
