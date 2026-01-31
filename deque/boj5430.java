@@ -1,4 +1,4 @@
-package deque;
+package solveByTopic.deque;
 
 // 문제
 
