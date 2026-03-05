@@ -1,0 +1,13 @@
+
+SELECT I.ITEM_ID, I.ITEM_NAME, I.RARITY
+FROM ITEM_INFO I
+JOIN ITEM_TREE T ON I.ITEM_ID=T.ITEM_ID
+WHERE 
+    T.PARENT_ITEM_ID IN(
+        -- 희귀도가 RARE인 ITEM_ID를 추출해서, 
+        SELECT ITEM_ID
+        FROM ITEM_INFO
+        WHERE RARITY='RARE'
+    )
+ORDER BY ITEM_ID DESC;
+-- 희귀도가 RARE인 아이템들의 id가 parentid에 있어야됨.
